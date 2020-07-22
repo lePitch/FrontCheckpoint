@@ -9,9 +9,11 @@ import { Member } from 'src/app/models/member/member';
 export class DetailsComponent implements OnInit {
 
   @Input() member: Member;
+  show: boolean = false;
   constructor() { }
 
   ngOnInit(): void {
   }
+  edit(){return this.show = !this.show;}
 
 }

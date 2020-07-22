@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, Input, EventEmitter } from '@angular/core';
 import { Member } from 'src/app/models/member/member';
 import { ActivatedRoute } from '@angular/router';
 import { Team } from 'src/app/models/team/team';
@@ -11,12 +11,14 @@ import { Team } from 'src/app/models/team/team';
 export class MemberformComponent implements OnInit {
 
   @Output() memberCreated = new EventEmitter<Member>();
+  @Input() m: Member;
 
   member: Member = new Member();
 
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    if(this.m != undefined){this.member = this.m;}
   }
 
   onSubmit() {

@@ -15,7 +15,16 @@ export class HackathonService {
   getAll(): Observable<Hackathon[]>{
     return this.http.get<Hackathon[]>(this.url + 'all');
   }
-  getHackathonById(id): Observable<Hackathon>{
+
+  getHackathonById(id: number): Observable<Hackathon>{
     return this.http.get<Hackathon>(this.url + id);
+  }
+
+  newHackathon(hackathon: Hackathon){
+    return this.http.post(this.url, hackathon).subscribe();
+  }
+
+  deleteHackathon(id: number){
+    this.http.delete(this.url + id).subscribe();
   }
 }

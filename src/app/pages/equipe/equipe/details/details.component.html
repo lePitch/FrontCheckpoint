@@ -2,3 +2,7 @@
 <img src="{{member.avatar}}" alt="avatar of {{member.name}}">
 <h3>{{member.quote}}</h3>
 <p>{{member.activity}}</p>
+<button (click)="edit()">Edit</button>
+<form *ngIf="show">
+  <app-memberform [m]="member"></app-memberform>
+</form>

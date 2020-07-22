@@ -11,7 +11,23 @@ export class MemberService {
 
   constructor(private http: HttpClient) { }
 
-  createMember(member: Member){
-    return this.http.post(this.url, member);
+  getAll(){
+    return this.http.get(this.url + 'all');
+  }
+
+  getOne(id: number){
+    return this.http.get(this.url + id);
+  }
+
+  newMember(member: Member){
+    return this.http.post(this.url, member).subscribe();
+  }
+
+  editMember(member: Member, id: number){
+    return this.http.put(this.url + id, member).subscribe();
+  }
+
+  delete(id: number){
+    return this.http.delete(this.url + id);
   }
 }

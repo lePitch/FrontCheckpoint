@@ -12,7 +12,20 @@ export class TeamService {
 
   constructor(private http: HttpClient) { }
 
+
+  getAll(){
+    return this.http.get(this.url + 'all');
+  }
+
   getTeamById(id): Observable<Team>{
     return this.http.get<Team>(this.url + id);
+  }
+
+  newTeam(team: Team){
+    return this.http.post(this.url, team).subscribe();
+  }
+
+  delete(id: number){
+    this.http.delete(this.url + id);
   }
 }

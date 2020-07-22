@@ -12,8 +12,7 @@ import { Team } from 'src/app/models/team/team';
 })
 export class MemberComponent implements OnInit {
 
-  team: Team = new Team();
-  member: Member = new Member();
+  team: Team;
 
   constructor(private memberService: MemberService, private teamService: TeamService, private route: ActivatedRoute) { }
 
@@ -23,7 +22,7 @@ export class MemberComponent implements OnInit {
       data => this.team = data); } );
   }
   parentReception(member: Member){
-    this.memberService.createMember(member);
+    this.memberService.newMember(member);
   }
 
 }

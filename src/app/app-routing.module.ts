@@ -9,8 +9,8 @@ import { MemberComponent } from './pages/create/member/member.component';
 
 const routes: Routes = [
   {path: '', component: HomepageComponent},
-  {path: 'hackathons', component: HackathonComponent},
-  {path: 'teams', component: EquipeComponent },
+  {path: 'hackathon/:id', component: HackathonComponent},
+  {path: 'team/:id', component: EquipeComponent },
   {path: 'members', component: MemberComponent }
 ];
 

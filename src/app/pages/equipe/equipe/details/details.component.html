@@ -4,5 +4,5 @@
 <p>{{member.activity}}</p>
 <button (click)="edit()">Edit</button>
 <form *ngIf="show">
-  <app-memberform [m]="member"></app-memberform>
+  <app-memberform [m]="member" (memberCreated)="parentReception($event)"></app-memberform>
 </form>

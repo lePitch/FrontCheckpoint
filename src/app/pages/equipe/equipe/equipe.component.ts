@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Team } from 'src/app/models/team/team';
 import { TeamService } from 'src/app/shared/team/team.service';
@@ -8,7 +8,7 @@ import { TeamService } from 'src/app/shared/team/team.service';
   templateUrl: './equipe.component.html',
   styleUrls: ['./equipe.component.scss']
 })
-export class EquipeComponent implements OnInit {
+export class EquipeComponent implements OnInit, OnChanges {
 
   team: Team = new Team();
 
@@ -17,7 +17,12 @@ export class EquipeComponent implements OnInit {
   ngOnInit(): void {
     this.route.paramMap.subscribe((params) => {
     this.service.getTeamById(+params.get('id')).subscribe(
-      data => {this.team = data; console.log(this.team); }); } );
+      data => {this.team = data;}); } );
+  }
+  ngOnChanges(){
+    this.route.paramMap.subscribe((params) => {
+      this.service.getTeamById(+params.get('id')).subscribe(
+        data => {this.team = data;}); } );
   }
 
 }

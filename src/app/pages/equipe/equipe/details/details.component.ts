@@ -20,4 +20,7 @@ export class DetailsComponent implements OnInit {
   parentReception(member: Member){
     this.memberService.newMember(member);
 }
+delete(){
+  this.memberService.delete(this.member.id);
+}
 }

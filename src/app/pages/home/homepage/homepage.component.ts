@@ -14,6 +14,6 @@ export class HomepageComponent implements OnInit {
   constructor(private service: HackathonService) { }
 
   ngOnInit(): void {
-    this.service.getAll().subscribe( data => {this.hackathons = data; console.log(this.hackathons)}); }
+    this.service.getAll().subscribe( data => {this.hackathons = data;}); }
 
 }

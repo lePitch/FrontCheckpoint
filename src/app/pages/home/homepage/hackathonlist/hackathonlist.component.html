@@ -1,1 +1,3 @@
-<p>hackathonlist works!</p>
+<div *ngFor="let hackathon of hackathons" routerLink="/hackathon/{{hackathon.id}}">
+  <h2>{{hackathon.name}}</h2>
+</div>

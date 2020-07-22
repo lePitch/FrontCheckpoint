@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Hackathon } from 'src/app/models/hackathon/hackathon';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-hackathonlist',
@@ -7,7 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HackathonlistComponent implements OnInit {
 
-  constructor() { }
+  @Input() hackathons: Hackathon[];
+
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
   }

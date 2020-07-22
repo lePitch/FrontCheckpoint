@@ -10,13 +10,13 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class HackathonComponent implements OnInit {
 
-  hackathon: Hackathon;
+  hackathon: Hackathon = new Hackathon();
 
   constructor(private service: HackathonService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe((params) => {
     this.service.getHackathonById(+params.get('id')).subscribe(
-      data => {this.hackathon = data;}); } );
+      data => {this.hackathon = data; }); } );
   }
 }

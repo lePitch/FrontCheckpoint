@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { HackathonService } from 'src/app/shared/hackathon/hackathon.service';
 import { ActivatedRoute } from '@angular/router';
 import { Team } from 'src/app/models/team/team';
 import { TeamService } from 'src/app/shared/team/team.service';
@@ -11,7 +10,7 @@ import { TeamService } from 'src/app/shared/team/team.service';
 })
 export class EquipeComponent implements OnInit {
 
-  team: Team;
+  team: Team = new Team();
 
   constructor(private service: TeamService, private route: ActivatedRoute) { }
 

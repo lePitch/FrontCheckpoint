@@ -1,1 +1,16 @@
-<p>memberform works!</p>
+<form>
+
+  <label for="name"></label>
+  <input type="text" name="name" [(ngModel)]="member.name" placeholder="name">
+
+  <label for="avatar"></label>
+  <input type="text" name="avatar" [(ngModel)]="member.avatar" placeholder="Url de ton avatar">
+
+  <label for="activity"></label>
+  <input type="text" name="activity" [(ngModel)]="member.activity" placeholder="Activité">
+
+  <label for="quote"></label>
+  <input type="text" name="quote" [(ngModel)]="member.quote" placeholder="Citation">
+
+  <button (click)="onSubmit()"> Save </button>
+</form>

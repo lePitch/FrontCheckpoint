@@ -8,7 +8,7 @@
   --thirdary-color: #424242;
   --fourthary-color: #C1C2C3;
   --fifthy-color: #ebecf1;
-  --sixty-color: #00adb5;
+  --sixty-color: rgb(239, 239, 239);
   --seventy-color: #e4f9ff;
   --heighty-color: #eeeeee;
 }
@@ -54,6 +54,7 @@ h1{
 }
 
 button{
+  margin-top:16px;
   display: inline-block;
   position: relative;
   cursor: pointer;
@@ -72,10 +73,10 @@ button{
   border: none;
   border-radius: 2px;
   transition: all .3s ease-out;
-  box-shadow: 0 1px 3px 0  rgb(239, 239, 239);;
+  box-shadow: 0 1px 3px 0 var(--sixty-color);;
 
   &:hover {
-    box-shadow: 0 3px 8px 0px rgb(239, 239, 239); }
+    box-shadow: 0 3px 8px 0px var(--sixty-color); }
 }
 
 .router{
@@ -131,4 +132,37 @@ button{
 .add{
   text-align: center;
   margin-block-end: 1rem;
+  }
+  form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+    margin: 3% auto;
+    padding: 10px 20px;
+    background: var(--secondary-color);
+    border-radius: 8px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 8px;
+    margin-top: 16px;
+    color: var(--fifthy-color);
+  }
+
+  input{
+    text-align: center;
+    border-radius: 5px;
+    background: rgba(255,255,255,0.1);
+    border: none;
+    font-size: 16px;
+    height: auto;
+    margin: 0;
+    outline: 0;
+    padding: 15px;
+    width: 75%;
+    background-color: var(--seventy-color);
+    color: var(--secondary-color);
+    // margin-bottom: 30px;
   }

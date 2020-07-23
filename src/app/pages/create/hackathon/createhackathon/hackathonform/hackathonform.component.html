@@ -1,5 +1,14 @@
-<form>
-  <label for="name"></label>
-  <input type="text" name="name" [(ngModel)]="hackathon.name" placeholder="name">
-  <button (click)="onSubmit()"> Save </button>
-</form>
+<div class="add">
+  <form (ngSubmit)="myForm.valid && onSubmit()" #myForm="ngForm">
+
+    <label for="name"><h3>Name</h3></label>
+    <input type="text" name="name"  minlength="2" maxlength="255" [(ngModel)]="hackathon.name" placeholder="name" #name="ngModel" required>
+    <div *ngIf="name.touched || myForm.submitted">
+      <p *ngIf="name.errors?.required">Name Required!</p>
+      <p *ngIf="name.errors?.minlength">Minimal length is 2!</p>
+      <p *ngIf="name.errors?.maxlength">Maximal length is 255!</p>
+    </div>
+
+    <button type="submit"> Save </button>
+  </form>
+</div>

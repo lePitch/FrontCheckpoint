@@ -1,16 +1,36 @@
-<form>
+<div class="add">
+  <form (ngSubmit)="myForm.valid && onSubmit()" #myForm="ngForm">
 
-  <label for="name"></label>
-  <input type="text" name="name" [(ngModel)]="member.name" placeholder="name">
+    <label for="name"><h3>Name</h3></label>
+    <input type="text" name="name"  minlength="2" maxlength="255" [(ngModel)]="member.name" placeholder="name" #name="ngModel" required>
+    <div *ngIf="name.touched || myForm.submitted">
+      <p *ngIf="name.errors?.required">Firstname Required!</p>
+      <p *ngIf="name.errors?.minlength">Minimal length is 3!</p>
+      <p *ngIf="name.errors?.maxlength">Maximal length is 255!</p>
+    </div>
 
-  <label for="avatar"></label>
-  <input type="text" name="avatar" [(ngModel)]="member.avatar" placeholder="Url de ton avatar">
+    <label for="avatar"><h3>Avatar</h3></label>
+    <input type="url" name="avatar" maxlength="255"  pattern="https?://.+" [(ngModel)]="member.avatar" placeholder="Url de ton avatar" #avatar="ngModel" required>
+    <div *ngIf="avatar.touched || myForm.submitted">
+      <p *ngIf="avatar.errors?.required">Url Required!</p>
+      <p *ngIf="avatar.errors?.pattern">Not an URL!</p>
+      <p *ngIf="name.errors?.maxlength">Maximal length is 255!</p>
+    </div>
 
-  <label for="activity"></label>
-  <input type="text" name="activity" [(ngModel)]="member.activity" placeholder="Activité">
+    <label for="activity"><h3>Activity</h3></label>
+    <input type="text" name="activity" maxlength="255"  [(ngModel)]="member.activity" placeholder="Activité" #activity="ngModel" required>
+    <div *ngIf="activity.touched || myForm.submitted">
+      <p *ngIf="activity.errors?.required">Activity Required!</p>
+      <p *ngIf="activity.errors?.maxlength">Maximal length is 255!</p>
+    </div>
 
-  <label for="quote"></label>
-  <input type="text" name="quote" [(ngModel)]="member.quote" placeholder="Citation">
+    <label for="quote"><h3>Quote</h3></label>
+    <input type="text" name="quote" maxlength="255"  [(ngModel)]="member.quote" placeholder="Citation" #quote="ngModel" required>
+    <div *ngIf="quote.touched || myForm.submitted">
+      <p *ngIf="quote.errors?.required">Quote Required!</p>
+      <p *ngIf="quote.errors?.maxlength">Maximal length is 255!</p>
+    </div>
 
-  <button (click)="onSubmit()"> Save </button>
-</form>
+    <button type="submit"> Save </button>
+  </form>
+</div>

@@ -1,6 +1,9 @@
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { Member } from 'src/app/models/member/member';
 import { MemberService } from 'src/app/shared/member/member.service';
+import { Router, ActivatedRoute } from '@angular/router';
+import { TeamService } from 'src/app/shared/team/team.service';
+import { Team } from 'src/app/models/team/team';
 
 @Component({
   selector: 'app-details',
@@ -10,6 +13,7 @@ import { MemberService } from 'src/app/shared/member/member.service';
 export class DetailsComponent implements OnInit {
   @Output() memberCreated = new EventEmitter<Member>();
   @Input() member: Member;
+  team: Team = new Team();
   show: boolean = false;
   constructor(private memberService: MemberService) { }
 

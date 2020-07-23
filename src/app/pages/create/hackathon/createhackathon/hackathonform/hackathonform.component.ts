@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Hackathon } from 'src/app/models/hackathon/hackathon';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-hackathonform',
@@ -12,12 +13,13 @@ export class HackathonformComponent implements OnInit {
 
   hackathon: Hackathon = new Hackathon();
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
   onSubmit() {
+    this.router.navigate(['']);
     this.hackathonCreated.emit(this.hackathon);
   }
 

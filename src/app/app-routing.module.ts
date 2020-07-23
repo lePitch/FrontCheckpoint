@@ -6,6 +6,7 @@ import { EquipeComponent } from './pages/equipe/equipe/equipe.component';
 import { MemberComponent } from './pages/create/member/member.component';
 import { TeamComponent } from './pages/create/team/team.component';
 import { CreatehackathonComponent } from './pages/create/hackathon/createhackathon/createhackathon.component';
+import { FileComponent } from './pages/file/file/file.component';
 
 
 const routes: Routes = [
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path: 'member/create/:id', component: MemberComponent },
   {path: 'team/create/:id', component: TeamComponent },
   {path: 'create', component: CreatehackathonComponent },
+  {path: 'files', component: FileComponent },
 
 ];
 

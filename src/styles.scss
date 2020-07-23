@@ -124,15 +124,12 @@ button{
 .router:focus::after {
 	top: 0%;
 	opacity: 1;
-}.add{
-  text-align: center;
-  margin-block-end: 1rem;
+}
+  .add{
+    text-align: center;
+    margin-block-end: 1rem;
   }
 
-.add{
-  text-align: center;
-  margin-block-end: 1rem;
-  }
   form{
     display: flex;
     flex-direction: column;
@@ -164,5 +161,4 @@ button{
     width: 75%;
     background-color: var(--seventy-color);
     color: var(--secondary-color);
-    // margin-bottom: 30px;
   }

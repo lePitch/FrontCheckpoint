@@ -17,7 +17,9 @@ import { TeamComponent } from './pages/create/team/team.component';
 import { TeamformComponent } from './pages/create/team/teamform/teamform.component';
 import { HackathonformComponent } from './pages/create/hackathon/createhackathon/hackathonform/hackathonform.component';
 import { CreatehackathonComponent } from './pages/create/hackathon/createhackathon/createhackathon.component';
-import { UploadfileComponent } from './pages/equipe/uploadfile/uploadfile.component';
+import { DowloadfileComponent } from './pages/file/file/dowloadfile/dowloadfile.component';
+import { FileComponent } from './pages/file/file/file.component';
+import { UploadfileComponent } from './pages/file/file/uploadfile/uploadfile.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { UploadfileComponent } from './pages/equipe/uploadfile/uploadfile.compon
     TeamformComponent,
     HackathonformComponent,
     CreatehackathonComponent,
-    UploadfileComponent
+    UploadfileComponent,
+    DowloadfileComponent,
+    FileComponent
   ],
   imports: [
     BrowserModule,

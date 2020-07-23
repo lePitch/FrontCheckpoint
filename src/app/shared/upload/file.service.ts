@@ -19,6 +19,6 @@ export class FileService {
   }
 
   getFile(name: String){
-    return this.http.get(this.url + 'files/' + name).subscribe();
+    return this.http.get(this.url + 'files/' + name)
   }
 }

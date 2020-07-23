@@ -1,0 +1,6 @@
+<div>
+  <div *ngFor="let file of files">
+    <h1>{{file.name}}</h1>
+    <button><a target="_blank" href="http://localhost:8080/files/{{file.name}}">Download!</a></button>
+  </div>
+</div>

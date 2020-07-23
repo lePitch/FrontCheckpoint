@@ -16,8 +16,8 @@ export class EquipeComponent implements OnInit, OnChanges {
 
   ngOnInit(): void {
     this.route.paramMap.subscribe((params) => {
-    this.service.getTeamById(+params.get('id')).subscribe(
-      data => {this.team = data;}); } );
+      this.service.getTeamById(+params.get('id')).subscribe(
+        data => {this.team = data;}); } );
   }
   ngOnChanges(){
     this.route.paramMap.subscribe((params) => {

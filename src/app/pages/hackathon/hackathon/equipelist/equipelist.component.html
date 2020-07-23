@@ -1,3 +1,5 @@
-<div *ngFor="let team of teams" routerLink="/team/{{team.id}}">
-  <h2>{{team.name}}</h2>
+<div class="list">
+  <div *ngFor="let team of teams" routerLink="/team/{{team.id}}" class="title router">
+    <h2>{{team.name}}</h2>
+  </div>
 </div>

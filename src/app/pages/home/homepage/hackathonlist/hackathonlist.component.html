@@ -1,3 +1,5 @@
-<div *ngFor="let hackathon of hackathons" routerLink="/hackathon/{{hackathon.id}}">
-  <h2>{{hackathon.name}}</h2>
+<div class="list">
+  <div *ngFor="let hackathon of hackathons" routerLink="/hackathon/{{hackathon.id}}" class="router">
+    <h2>{{hackathon.name}}</h2>
+  </div>
 </div>

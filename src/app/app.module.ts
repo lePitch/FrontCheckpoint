@@ -13,6 +13,10 @@ import { DetailsComponent } from './pages/equipe/equipe/details/details.componen
 import { MemberComponent } from './pages/create/member/member.component';
 import { MemberformComponent } from './pages/create/member/memberform/memberform.component';
 import { HackathonlistComponent } from './pages/home/homepage/hackathonlist/hackathonlist.component';
+import { TeamComponent } from './pages/create/team/team.component';
+import { TeamformComponent } from './pages/create/team/teamform/teamform.component';
+import { HackathonformComponent } from './pages/create/hackathon/createhackathon/hackathonform/hackathonform.component';
+import { CreatehackathonComponent } from './pages/create/hackathon/createhackathon/createhackathon.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +28,11 @@ import { HackathonlistComponent } from './pages/home/homepage/hackathonlist/hack
     EquipeComponent,
     DetailsComponent,
     MemberComponent,
-    MemberformComponent
+    MemberformComponent,
+    TeamComponent,
+    TeamformComponent,
+    HackathonformComponent,
+    CreatehackathonComponent
   ],
   imports: [
     BrowserModule,

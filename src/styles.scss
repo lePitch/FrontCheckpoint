@@ -35,31 +35,24 @@ p, h2, h3{
   font-family: 'Raleway';
 }
 h1{
+  margin-left: 2.5%;
   color: var(--fifthy-color);
   text-align: center;
   font-size: 5rem;
-  margin-block-start: 0.4em;
+  width: 95%;
+  margin-block-start: 0.2em;
+  margin-block-end: 0.2em;
     padding-block-end: 0.7em;
     margin-inline-start: 0,4px;
     margin-inline-end: 0,4px;
     font-weight: normal;
-    border-radius: 16px;
     border-bottom: 1px solid var(--heighty-color);
-}
-h1:after {
-	content: '';
-  margin-block-start: 0.7em;
-  position: absolute;
-	display: block;
-  width: 98%;
-  height: 100%;
-	border-radius: 16px;
-	border-top: 1px solid var(--heighty-color);
 }
 
 .title{
   margin: 1%;
 }
+
 button{
   display: inline-block;
   position: relative;
@@ -73,18 +66,16 @@ button{
   font-family: 'Roboto', sans-serif;
   letter-spacing: .8px;
   text-align: center;
-  text-decoration: none;
   text-transform: uppercase;
   vertical-align: middle;
   white-space: nowrap;
-  outline: none;
   border: none;
-  user-select: none;
   border-radius: 2px;
   transition: all .3s ease-out;
-  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.225);
+  box-shadow: 0 1px 3px 0  rgb(239, 239, 239);;
 
-  &:hover { text-decoration: none; box-shadow: 0 4px 10px 0px rgba(0,0,0,0.225); }
+  &:hover {
+    box-shadow: 0 3px 8px 0px rgb(239, 239, 239); }
 }
 
 .router{
@@ -132,4 +123,12 @@ button{
 .router:focus::after {
 	top: 0%;
 	opacity: 1;
-}
+}.add{
+  text-align: center;
+  margin-block-end: 1rem;
+  }
+
+.add{
+  text-align: center;
+  margin-block-end: 1rem;
+  }

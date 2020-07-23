@@ -1,5 +1,9 @@
 <h1>{{team.name}}</h1>
-<button routerLink="/team/create/{{team.id}}">Add a Member!</button>
+
+<div class="add">
+  <button routerLink="/member/create/{{team.id}}">Add a Member!</button>
+</div>
+
 <div class="list">
   <div *ngFor="let member of team.members" class="member">
     <app-details [member]="member"></app-details>

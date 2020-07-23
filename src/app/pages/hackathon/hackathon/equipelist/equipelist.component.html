@@ -1,5 +1,7 @@
 <div class="list">
   <div *ngFor="let team of teams" routerLink="/team/{{team.id}}" class="title router">
     <h2>{{team.name}}</h2>
+    <img src="{{team.avatar}}" alt="avatar du hackathon">
+    <button (click)="delete(team.id)">Delete this team :(</button>
   </div>
 </div>

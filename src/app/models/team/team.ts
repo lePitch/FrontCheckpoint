@@ -6,4 +6,5 @@ export class Team {
   public members: Member[];
   public name: string;
   public hackathon: Hackathon;
+  public avatar: string;
 }

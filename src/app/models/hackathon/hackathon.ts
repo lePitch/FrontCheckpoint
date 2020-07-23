@@ -4,4 +4,5 @@ export class Hackathon {
   public id: number;
   public teams: Team[];
   public name: string;
+  public avatar: string;
 }

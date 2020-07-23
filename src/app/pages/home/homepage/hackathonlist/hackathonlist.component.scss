@@ -3,3 +3,12 @@
   justify-content: space-evenly;
   font-size: 40px;
 }
+.router{
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  height: 700px;
+}
+button{
+  margin: 30px;
+}

@@ -14,6 +14,6 @@ export class DowloadfileComponent implements OnInit {
 
   ngOnInit(): void {
     this.service.getAll().subscribe(
-      data => {this.files = data; console.log(this.files)})
+      data => {this.files = data;})
   }
 }

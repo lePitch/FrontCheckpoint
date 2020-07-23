@@ -1,6 +1,6 @@
 import { Component, OnInit, Output, Input, EventEmitter } from '@angular/core';
 import { Member } from 'src/app/models/member/member';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Team } from 'src/app/models/team/team';
 import { RandomuserService } from 'src/app/shared/randomuser/randomuser.service';
 
@@ -18,7 +18,7 @@ export class MemberformComponent implements OnInit {
 
   id:number;
 
-  constructor(private route: ActivatedRoute,
+  constructor(private router: Router, private route: ActivatedRoute,
     private randomUserService: RandomuserService) { }
 
   ngOnInit(): void {
@@ -28,6 +28,7 @@ export class MemberformComponent implements OnInit {
   randomize(){
     this.route.params.subscribe(params => { this.id = +params.id; });
     this.randomUserService.getRandomUser(this.id);
+    this.router.navigate(['']);
   }
 
   onSubmit() {
@@ -35,5 +36,6 @@ export class MemberformComponent implements OnInit {
       this.member.team = new Team();
       this.member.team.id = +params.id; });
     this.memberCreated.emit(this.member);
+    this.router.navigate(['']);
   }
 }

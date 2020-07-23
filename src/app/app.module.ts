@@ -17,6 +17,7 @@ import { TeamComponent } from './pages/create/team/team.component';
 import { TeamformComponent } from './pages/create/team/teamform/teamform.component';
 import { HackathonformComponent } from './pages/create/hackathon/createhackathon/hackathonform/hackathonform.component';
 import { CreatehackathonComponent } from './pages/create/hackathon/createhackathon/createhackathon.component';
+import { UploadfileComponent } from './pages/equipe/uploadfile/uploadfile.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { CreatehackathonComponent } from './pages/create/hackathon/createhackath
     TeamComponent,
     TeamformComponent,
     HackathonformComponent,
-    CreatehackathonComponent
+    CreatehackathonComponent,
+    UploadfileComponent
   ],
   imports: [
     BrowserModule,

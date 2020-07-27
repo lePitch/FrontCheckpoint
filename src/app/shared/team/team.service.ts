@@ -26,6 +26,6 @@ export class TeamService {
   }
 
   delete(id: number){
-    this.http.delete(this.url + id).subscribe();
+    return this.http.delete(this.url + id).subscribe();
   }
 }

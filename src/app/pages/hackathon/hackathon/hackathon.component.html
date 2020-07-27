@@ -1,12 +1,15 @@
+<button [routerLink]="['']">Go Home!</button>
 <div class="title">
   <h1>{{hackathon.name}}</h1>
 <div class="add">
-  <button routerLink="/team/create/{{hackathon.id}}" routerLinkActive="router-link-active" >
+  <button routerLink="/team/create/{{hackathon.id}}">
     Add a team!
   </button>
 </div>
 
 </div>
 <div class="list">
-  <app-equipelist [teams]="hackathon.teams"></app-equipelist>
+  <div *ngFor="let team of hackathon.teams">
+    <app-equipelist [team]="team"></app-equipelist>
+  </div>
 </div>

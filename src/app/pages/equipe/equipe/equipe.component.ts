@@ -1,5 +1,5 @@
 import { Component, OnInit, OnChanges } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Team } from 'src/app/models/team/team';
 import { TeamService } from 'src/app/shared/team/team.service';
 
@@ -12,7 +12,7 @@ export class EquipeComponent implements OnInit, OnChanges {
 
   team: Team = new Team();
 
-  constructor(private service: TeamService, private route: ActivatedRoute) { }
+  constructor(private service: TeamService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe((params) => {
@@ -25,4 +25,7 @@ export class EquipeComponent implements OnInit, OnChanges {
         data => {this.team = data;}); } );
   }
 
+  download(){
+    this.router.navigate(['files']);
+  }
 }

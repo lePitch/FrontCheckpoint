@@ -1,8 +1,6 @@
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { Member } from 'src/app/models/member/member';
 import { MemberService } from 'src/app/shared/member/member.service';
-import { Router, ActivatedRoute } from '@angular/router';
-import { TeamService } from 'src/app/shared/team/team.service';
 import { Team } from 'src/app/models/team/team';
 
 @Component({
@@ -23,8 +21,8 @@ export class DetailsComponent implements OnInit {
 
   parentReception(member: Member){
     this.memberService.newMember(member);
-}
-delete(){
-  this.memberService.delete(this.member.id);
-}
+  }
+  delete(){
+    this.memberService.delete(this.member.id);
+  }
 }

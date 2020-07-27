@@ -1,3 +1,5 @@
+<button [routerLink]="['']">Go Home!</button>
+
 <h1>{{team.name}}</h1>
 
 <div class="add">
@@ -11,3 +13,6 @@
 </div>
 
 <app-uploadfile></app-uploadfile>
+<div class="list">
+  <button (click)="download()">Download !</button>
+</div>

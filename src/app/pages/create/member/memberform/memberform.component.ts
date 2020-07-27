@@ -26,16 +26,16 @@ export class MemberformComponent implements OnInit {
   }
 
   randomize(){
+    this.router.navigate(['']);
     this.route.params.subscribe(params => { this.id = +params.id; });
     this.randomUserService.getRandomUser(this.id);
-    this.router.navigate(['']);
   }
 
   onSubmit() {
+    this.router.navigate(['']);
     this.route.params.subscribe(params => {
       this.member.team = new Team();
       this.member.team.id = +params.id; });
     this.memberCreated.emit(this.member);
-    this.router.navigate(['']);
   }
 }

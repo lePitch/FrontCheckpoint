@@ -21,10 +21,10 @@ export class TeamformComponent implements OnInit {
   }
 
   onSubmit() {
+    this.router.navigate(['']);
     this.route.params.subscribe(params => {
       this.team.hackathon = new Hackathon();
       this.team.hackathon.id = +params.id; });
     this.teamCreated.emit(this.team);
-    this.router.navigate(['']);
   }
 }
